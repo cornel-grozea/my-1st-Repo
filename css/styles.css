@@ -1,0 +1,396 @@
+:root {
+    --color1: rgb(111, 39, 105); 
+    --color2-light: rgb(139, 90, 135);
+    --color3-lightest: rgb(170, 160, 169);
+    --color4-dark: rgb(83, 3, 76);
+    --color5-darkest: rgb(59, 0, 54); 
+}
+
+@font-face {
+    font-family: fasterOne;
+    src: url(../fonts/FasterOne-Regular.ttf);
+}
+@font-face {
+    font-family: carterOne;
+    src: url(../fonts/CarterOne-Regular.ttf);
+}
+@font-face {
+    font-family: bareCode;
+    src: url(../fonts/LibreBarcode39ExtendedText-Regular.ttf);
+}
+
+
+/* index page  */
+
+body {
+    margin: 0;
+}
+
+header {
+    background-color: var(--color1);
+}
+
+footer {
+    background-color: var(--color1);
+    font-size: 1.5rem;
+}
+
+footer div {
+    width: 100vw;
+    color: var(--color3-lightest);
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: carterOne, Arial, Helvetica, sans-serif;
+}
+
+nav.mainNav {
+    background-color: var(--color3-lightest);
+    line-height: 25px;
+    position: sticky;
+    top: 0; 
+    z-index: 10;
+}
+
+nav.mainNav ul li {
+    list-style-type: none;
+    display: inline-block;
+    text-decoration: none; 
+}
+
+nav.mainNav ul li a {
+    margin: 15px; 
+    padding: 10px 15px; 
+    color: var(--color5-darkest);
+    font-family: fasterOne, sans-serif; 
+    font-size: 1.3rem;
+}
+
+nav.mainNav ul li a:hover{
+    color: var(--color3-lightest);
+    background-color: var(--color5-darkest);
+    border-radius: 25px;
+}
+
+nav.mainNav a::before {
+    content: " <<"; 
+}
+
+nav.mainNav a::after{
+    content: " >>";
+}
+
+a, 
+a:visited {
+    text-decoration: none;
+}
+
+.open {
+    background-color: var(--color2-light);
+}
+
+.center {
+    text-align: center; 
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.wrapperSlider {
+ position: relative; 
+}
+
+.contaierSlider {
+    border: 5px solid black;
+    width: 1000px;
+    height: 350px;
+    display: inline-block;
+    position: relative; 
+    overflow: hidden; 
+    padding: 0;
+    margin: 0; 
+}
+
+
+.contaierSlider li {
+    list-style-type: none;
+    margin: 0; 
+    padding: 0;
+}
+
+.contaierSlider .imagesSlide {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 1000px;
+    height: 1400px;
+    top: 0;
+    animation: carsAnimation 10s infinite;
+    line-height: 0;
+}
+
+@keyframes carsAnimation {
+    0% {
+        top: 0;
+    }
+    30% {
+        top: 0;
+    }
+    39% {
+        top: -350px;
+    }
+    60% {
+        top: -350px;
+    }
+    69% {top: -700px;
+    }
+    92% {
+        top: -700px;
+    }
+    100% {
+        top: -1050px;
+    }
+}
+
+.h2Index {
+    text-indent: 2rem;
+    margin: 25px; 
+}
+
+#shortDescription {
+    text-indent: 2rem;
+    font: 1.25rem bold carterOne, sans-serif; 
+    margin: 25px; 
+    padding: 10px; 
+}
+
+
+
+
+/* page 2 */
+
+#flexBoxContainer {
+    margin: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-column-gap: 50px; 
+    row-gap: 50px; 
+    position: relative; 
+}
+
+.fleet {
+    /* border: 1px solid black; */
+    text-align: center;
+}
+
+.fleet li{
+    text-align: left;
+}
+
+div.fleet:hover {
+    box-shadow: -5px -5px 10px grey,
+                    5px 5px 10px grey;
+}
+
+.containerItemPage2 {
+    position: relative; 
+    padding: 15px;
+    overflow: hidden;
+    border: 1px solid black; 
+}
+
+.fleet::after {
+    content: attr(data-tooltip);
+    background-color: var(--color2-light);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -150px; 
+    left: 50%; 
+    transform: translateX(-50%);
+    font-size: 3rem;
+    opacity: 0.1; 
+    width: 400px;
+    height: 140px; 
+    transition: top 1000ms ease,
+                opacity 2000ms ease 500ms; 
+}
+
+.fleet:hover::after {
+    top: 35px;
+    opacity: 0.8;
+}
+
+
+/* page 4 */
+
+.formPage4 {
+    margin: 10px; 
+    width: 350px; 
+    color: var(--color4-dark); 
+}
+
+legend {
+    color: var(--color5-darkest);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.h2page4,
+.notReq,
+.formPage4 {
+    color: var(--color4-dark); 
+}
+
+:required {
+    background-color: var(--color3-lightest);
+}
+
+.formPage4,
+.formPage4 select,
+.formPage4 input,
+.formPage4 textarea {
+    font-size: 1.2rem;
+}
+
+.formPage4 legend {
+    font-size: 1.3rem;
+}
+
+.formPage4 {
+    width: 400px;
+}
+
+.width330 input,
+.width330 select {
+    width: 330px; 
+}
+
+.req::after {
+    content: " * ";
+    color: red; 
+}
+
+.obs {
+    color: red; 
+    line-height: 1px;
+    font-size: 1rem;
+}
+
+.formPage4 button {
+    width: 170px; 
+    height: 40px;
+    font-size: 1.25rem;
+    background-color: var(--color4-dark);
+    color: var(--color3-lightest);
+    border-radius: 25px;
+}
+
+
+/* page3 */
+
+.h2Page3 {
+    text-align: center;
+    color: var(--color4-dark)
+}
+.tb {
+    display: table;
+    border: 1px solid var(--color5-darkest);
+    border-collapse: collapse;
+    margin: auto;
+    color: var(--color4-dark);
+}
+
+.tr,
+.th {
+    display: table-row;
+}
+
+.th {
+    font-weight: bold;
+}
+
+.tc {
+    display: table-cell;
+    border: 1px solid var(--color5-darkest); 
+    min-width: 30px;
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.tablePage3 {
+    counter-reset: pos;
+}
+
+.tablePage3 .tr {
+    counter-increment: pos;
+}
+
+.tablePage3 .tc:first-child::before {
+    content: counter(pos) ". ";
+}
+
+.tablePage3 .th .tc:first-child {
+    visibility: hidden; 
+}
+
+.tableOrder,
+.tableOrder th,
+.tableOrder td {
+    border: 1px solid var(--color5-darkest);
+    border-collapse: collapse;
+    padding: 10px;
+    margin: 50px;
+    text-align: center;
+}
+
+.tableOrder caption {
+    font-family: bareCode;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color5-darkest)
+}
+
+.tableOrder th {
+    background-color: var(--color3-lightest);
+}
+
+.tableOrder tr:last-child {
+    color: var(--color5-darkest);
+    font-size: 1.15rem;
+}
+
+.tableOrder tr:last-child td:last-child {
+    font-weight: bold;
+    background-color: var(--color3-lightest);
+}
+
+.tableOrder tr:last-child td:first-child {
+    text-align: right;
+}
+
+
+ /* counting lines for Order summary order */
+.tableOrder {
+    counter-reset: ordNo;
+}
+
+.tableOrder .countPage3 {
+    counter-increment: ordNo;
+}
+
+.tableOrder .countPage3 td:first-child:after {
+    content: " # " counter(ordNo);
+}
+/* end of code block here  */
+
+
+
+

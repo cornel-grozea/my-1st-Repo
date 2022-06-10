@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	    <meta name="description" content="proiect infoacademy HTML + CSS" />
+	    <meta name="keywords" content="proiect">
+	    <meta name="author" content="Cornel Grozea">
+        <link href="./img/car2.ico" type="image/x-icon" rel="icon">
+        <title>Contact Form</title>
+        <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    </head>
+
+    <body>
+        <header>
+           <a href="./index.html" title="Mergi la pagina principala">
+                <img src="./img/logo.png" alt="logoTrio">
+           </a> 
+        </header>
+
+        <nav class="mainNav center"> 
+            <ul>
+                <li>
+                    <a href="./index.html">Home Page</a>
+                </li>
+                <li>
+                    <a href="./pagina2.html">Fleet</a>
+                </li>
+                <li>
+                    <a href="./pagina3.html">Prices</a>
+                </li>
+                <li class="open">
+                    <a href="./pagina4.html">Form</a>
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+            <h2 class="h2page4">Selection and contact:  </h2>
+
+            <form action="mailto:cornel.grozea@tokeninc.com" method="post" name="contact" class="formPage4">
+                <fieldset>
+                    <legend>Choose the class of car you prefer</legend>
+                    <div>
+                        <input type="radio" id="economy" name="service" value="1">
+                        <label for="economy">Economy</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="medium" name="service" value="2" checked>
+                        <label for="medium">Medium</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="luxury" name="service" value="3">
+                        <label for="luxury">Luxury</label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="width330">
+                    <legend>Select car</legend>
+                    <select name="carSelection" id="cars" class="req" autofocus>
+                        <optgroup label="Economy">
+                            <option value="panda">Fiat Panda</option>
+                            <option value="polo">Volkswagen Polo</option>
+                        </optgroup>
+                        <optgroup label="Medium">
+                            <option value="logan" selected>Dacia Logan</option>
+                            <option value="rapid">Skoda Rapid</option>
+                            <option value="duster">Dacia Duster</option>
+                        </optgroup>
+                        <optgroup label="Luxury">
+                            <option value="bmw">BMW 7series</option>
+                        </optgroup>
+                    </select>
+                </fieldset>
+
+                <fieldset class="width330">
+                    <legend>Rental dates</legend>
+                    <div>
+                        <div class="req">
+                            <label for="startDate">Start date</label>
+                        </div>
+                        <div>
+                            <input type="datetime-local" id="startDate" name="startDate" required>
+                        </div>
+                        <div class="req">
+                            <label for="endDate">End date</label>
+                        </div>
+                        <div>
+                            <input type="datetime-local" id="endDate" name="endDate" required>
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <fieldset class="width330">
+                    <legend>Client's contact details</legend>
+                    <div class="req">
+                        <label for="name1">First name:</label>
+                    </div>
+                    <div>
+                        <input type="text" id="name1" placeholder="insert your first name" required>
+                    </div>
+
+                    <div class="req">
+                        <label for="name2">Last name: </label>
+                    </div>
+                    <div>
+                        <input type="text" id="name2" placeholder="insert your last name" required>
+                    </div>       
+                    
+                    <div class="req">
+                        <label for="tel">Tel: </label>
+                    </div>
+                    <div>
+                        <input type="text" id="tel" placeholder="insert your phone no." required>
+                    </div>  
+
+                    <div class="req">
+                        <label for="license">Load license copy</label>
+                    </div>
+                    <div>
+                        <input type="file" id="license" name="license" required>
+                    </div>
+
+                    <div class="notReq">
+                        <label for="comp">Company name: </label>
+                    </div>
+                    <div>
+                        <input type="text" id="comp" placeholder="insert your company">
+                    </div> 
+
+                    <div class="notReq">
+                        <label for="mail">Mail: </label>
+                    </div>
+                    <div>
+                        <input type="text" id="mail" placeholder="insert your mail">
+                    </div>  
+                    <p class="obs"> * are mandatory fields</p>
+                </fieldset>
+
+
+                <fieldset  class="notReq">
+                    <legend>Comments & questions: </legend>
+                    <textarea cols="30" rows="7" placeholder="let us know your opinion or doubt"></textarea>
+                </fieldset>
+
+                <button type="submit" value="submit">Submit</button>
+                <button type="reset" value="reset">Reset</button>  
+            </form>
+        </main>
+
+        <footer>
+            <div>
+                <p class="left">Grozea</p>
+                <p class="center">Cornel</p>
+                <p class="right">HTML P02 - 01 Mar 2022</p>
+            </div>
+        </footer>
+        
+    </body>
+</html>
